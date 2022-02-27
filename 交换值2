@@ -1,0 +1,14 @@
+#include<cstdio>
+#include<iostream>
+
+int main(){
+	int i = 1000;
+	int j = 2000;
+	i = i + j;
+	j = i - j;
+	i = i - j;
+
+	printf("交换后的i=%d\nj=%d\n",i,j);
+	system("pause");
+	return 0;
+}
