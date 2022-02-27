@@ -1,0 +1,25 @@
+#include<cstdio>
+#include<iostream>
+#define _CRT_SECURE_NO_WARNINGS 1
+
+int main(){
+	int num1, num2, max, i,j;
+	int temp;
+	scanf("%d%d", &num1,&num2);
+
+	if (num1 < num2)
+		i = num1;
+	else
+		i = num2;
+
+	max = 1;
+	for (j = 1; j <= i; j++){
+		if (num1 % j == 0 && num2 % j == 0){
+			temp = j;
+			if (temp>max)
+				max = temp;
+		}		
+	}
+	printf("%d", max);
+	system("pause");
+}
