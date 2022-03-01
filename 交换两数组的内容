@@ -1,0 +1,28 @@
+#include<cstdio>
+#include<iostream>
+
+void print(int b[],int j){
+	for (int i = 0; i < j; i++){
+		printf("%d\t", b[i]);
+	}
+}
+
+void exchange(int a[],int b[], int j){
+	for (int i = 0; i < j; i++){
+		int temp = a[i];
+		a[i] = b[i];
+		b[i] = temp;
+	}
+}
+
+int main(){
+	int a[5] = { 1, 2, 3, 4, 5 };
+	int b[5] = { 6, 7, 8,9, 10 };
+	exchange(a, b, 5);
+	print(a,5);
+	printf("\n");
+	print(b,5);
+	system("pause");
+	
+}
+
