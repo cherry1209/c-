@@ -1,0 +1,34 @@
+#include<cstdio>
+#include<iostream>
+
+void zheng(int i){
+	int j, k;
+	for (j = 1; j <= i;  j+= 2){
+		for (int k = 0; k < (i- j) / 2; k++){
+			printf(" ");
+		}
+		for (int k = 0; k < j; k++){
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+
+void fang(int i){
+	int j;
+	for (j = 0; j < i; j += 2){
+		for (int k = 0; k < j; k+=2){
+			printf(" ");
+		}
+		for (int k = 0; k <i-j; k++){
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+int main(){
+	int i=9 ;
+	zheng(i);
+	fang(i);
+	system("pause");
+}
