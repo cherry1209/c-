@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<iostream>
+
+int add(int a, int n){
+	int i;
+	int sum=a;
+	for (i = 1; i < n; i++){
+		sum = sum*10 + a;
+	}
+	return sum;
+}
+int main(){
+	int m,i;//m为要222中的2
+	int sum=0;
+	int k;//k为次数
+	scanf_s("%d%d", &m,&k);
+	for (i = 1; i <= k; i++){//结果
+		sum = add(m, i)+sum;
+	}
+	for (i = 1; i <= k; i++){//输出a+aa+aaa+aaa=的格式
+		printf("%d", add(m,i) );
+		if (k!=i)
+			printf("+");
+	}
+	printf("=%d", sum);
+	system("pause");
+}
