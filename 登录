@@ -1,0 +1,17 @@
+#include<cstdio>
+#include<iostream>
+#include<string.h>
+
+int judge(char a[]){
+	if (a != 1314520){
+		printf("密码错误");
+	}
+
+}
+int main(){
+	int key;
+	scanf_s("%S")
+	printf("%d\n");
+	system("pause");
+
+}
