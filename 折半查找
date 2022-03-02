@@ -1,0 +1,30 @@
+#include<cstdio>
+#include<iostream>
+
+int BinarySearch(int a[], int x, int left, int right){//折半查找函数，x为想要查找的数，left为数组下标
+
+	if (left > right){
+		printf("查找失败\n");
+		return -1;
+	}
+
+	int mid;
+
+	while (left <= right){
+		mid = (right + left) / 2;
+		if (x == a[mid])
+			return mid;
+		else if (x < a[mid]){
+			right = mid - 1;
+		}
+		else
+			left= mid + 1;
+	}
+}
+int main(){
+	int a[7] = { 1, 8, 10, 45, 55, 65, 75 };
+	BinarySearch(a, 8, 0, 6);
+	printf("%d\n", BinarySearch(a, 8, 0, 6));
+	system("pause");
+
+}
