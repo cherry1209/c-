@@ -1,0 +1,21 @@
+#include<cstdio>
+#include<iostream>
+
+void multiple(int n){//函数用于实现乘法表的打印
+	int i, j;
+	for (i = 1; i <= n; i++){
+		for (j = 1; j <= i; j++){
+			printf("%d*%d=%d\t", j, i, i*j);
+		}
+		printf("\n");
+	}
+}
+
+int main(){//主函数
+	int x;
+	scanf_s("%d", &x);
+	multiple(x);
+
+	system("pause");
+
+}
