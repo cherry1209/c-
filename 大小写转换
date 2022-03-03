@@ -1,0 +1,16 @@
+#include<cstdio>
+#include<iostream>
+
+int main(){
+	char ch;
+	while ((ch = getchar()) != EOF){//用于一直接收字符，换行且ctrl+z结束
+		if (ch >= 65 && ch <= 92)//如果是大写
+			printf("%c转换后的：%c", ch, ch + 32);
+
+		if (ch >= 97 && ch <= 123) //如果是小写
+			printf("%c转换后: %c", ch,ch - 32);
+	}
+
+	system("pause");
+
+}
