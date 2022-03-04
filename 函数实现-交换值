@@ -1,0 +1,25 @@
+#include<cstdio>
+#include<iostream>
+
+void exchange(int *a,int *b){
+	int temp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
+
+}
+
+int main(){
+	int x,y;
+  
+	printf("x的值：");
+	scanf_s("%d", &x);
+  
+	printf("y的值：");
+	scanf_s("%d", &y);
+  
+	exchange(&x,&y);
+	printf("x的值：%d\ny的值：%d\n", x, y);
+	system("pause");
+
+}
