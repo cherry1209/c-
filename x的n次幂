@@ -1,0 +1,21 @@
+#include<cstdio>
+#include<iostream>
+
+int mi(int x,int n){
+	if (n == 1)
+		return x;
+	else
+		return x*mi(x, n - 1);
+}
+
+int main(){
+	int x, n;
+	printf("x的值：");
+	scanf_s("%d", &x);
+  
+	printf("n的值：");
+	scanf_s("%d", &n);
+	
+	printf("%d的%d次幂%d\n",x,n, mi(x,n));
+	system("pause");
+}
