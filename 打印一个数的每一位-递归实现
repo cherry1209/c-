@@ -1,0 +1,19 @@
+#include<cstdio>
+#include<iostream>
+
+void print(int x){
+	if (x/10!=0){
+		print(x/10);
+	}
+		printf("%d\t", x % 10);	
+}
+
+int main(){
+	int x;
+	printf("x的值：");
+	scanf_s("%d", &x);
+	print(x);
+
+	system("pause");
+
+}
