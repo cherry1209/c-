@@ -1,0 +1,22 @@
+#include<cstdio>
+#include<iostream>
+
+int cheng(int n){
+	if (n == 1){
+		printf("1=");
+	    return 1;
+    }
+	else{
+		printf("%d*", n);
+		return n*cheng(n - 1);
+	}
+	}
+		
+
+int main(){
+	int x; 
+	printf("输入x的值：\n");
+	scanf_s("%d", &x);
+	printf("%d的阶乘：%d", x,cheng(x));
+	system("pause");
+}
